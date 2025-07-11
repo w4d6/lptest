@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>理想のわたしへシフト - 新世代ダイエットサプリ</title>
+    
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                        pop: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#10B981', // Emerald-500
+                        secondary: '#F59E0B', // Amber-500
+                        accent: '#EF4444', // Red-500 for alerts
+                    },
+                    animation: {
+                        'float': 'float 4s ease-in-out infinite',
+                        'pulse-strong': 'pulse-strong 2s infinite',
+                    },
+                    keyframes: {
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'pulse-strong': {
+                            '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+                            '50%': { transform: 'scale(1.08)', opacity: '0.9' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dark .dark-glass-effect {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-500">
+
+    <!-- Dark Mode Toggle -->
+    <div class="fixed top-4 right-4 z-50">
+        <button id="darkModeToggle" class="w-12 h-12 bg-gray-800 dark:bg-white text-white dark:text-gray-800 rounded-full flex items-center justify-center shadow-lg focus:outline-none">
+            <i class="fas fa-moon text-xl hidden dark:inline"></i>
+            <i class="fas fa-sun text-xl inline dark:hidden"></i>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary text-white">
+        <div class="absolute inset-0">
+            <img src="https://picsum.photos/1600/900?random=1" alt="Healthy Lifestyle" class="w-full h-full object-cover opacity-70">
+            <div class="absolute inset-0 bg-black opacity-40"></div>
+        </div>
+        <div class="container mx-auto px-6 text-center z-10">
+            <h1 data-aos="fade-down" class="text-5xl md:text-7xl lg:text-8xl font-pop font-extrabold mb-6 leading-tight tracking-tighter">
+                SHIFT to IDEAL
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="200" class="text-xl md:text-2xl mb-10 opacity-90 max-w-3xl mx-auto">
+                もう悩まない、もう我慢しない。
+                自分らしく美しく、内側から輝く毎日へ。
+            </p>
+            <a href="#cta" data-aos="zoom-in" data-aos-delay="400" class="bg-secondary hover:bg-amber-400 text-white font-bold text-xl px-12 py-5 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 animate-pulse-strong">
+                <i class="fas fa-rocket mr-3"></i>
+                今すぐ理想の私へ
+            </a>
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-4xl animate-bounce">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problems Section -->
+    <section class="py-20 bg-white dark:bg-gray-800 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-primary">
+                    こんなお悩み、ありませんか？
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400">ひとつでも当てはまったら、それは変化のサイン。</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Problem Card 1 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-50 dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-weight-hanging text-primary text-3xl mr-4"></i>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">体重が戻らない</h3>
+                    </div>
+                    <p class="leading-relaxed">学生時代より3kg増。戻したいのに時間も気力もない…</p>
+                </div>
+                <!-- Problem Card 2 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-50 dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-tired text-primary text-3xl mr-4"></i>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">朝のむくみ顔</h3>
+                    </div>
+                    <p class="leading-relaxed">毎朝、鏡を見るたびテンションが下がる。</p>
+                </div>
+                <!-- Problem Card 3 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-50 dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-couch text-primary text-3xl mr-4"></i>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">運動不足</h3>
+                    </div>
+                    <p class="leading-relaxed">在宅ワークで運動量ゼロ。食事を抜いても変わらない。</p>
+                </div>
+                <!-- Problem Card 4 -->
+                <div data-aos="fade-up" data-aos-delay="400" class="bg-gray-50 dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cookie-bite text-primary text-3xl mr-4"></i>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">誘惑に勝てない</h3>
+                    </div>
+                    <p class="leading-relaxed">糖質オフは続かない。友達とのカフェ巡りでついスイーツ…</p>
+                </div>
+                <!-- Problem Card 5 -->
+                <div data-aos="fade-up" data-aos-delay="500" class="bg-gray-50 dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 md:col-span-2 lg:col-span-1">
+                     <div class="flex items-center mb-4">
+                        <i class="fas fa-shield-virus text-primary text-3xl mr-4"></i>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">安全性が不安</h3>
+                    </div>
+                    <p class="leading-relaxed">サプリは沢山あるけど、品質が不安で手を出せない。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="py-20 bg-gray-100 dark:bg-gray-900 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-primary">
+                    ご使用方法
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400">毎日手軽に、理想の自分へ。</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+                <!-- Step 1 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center shadow-xl">
+                    <div class="w-24 h-24 flex items-center justify-center mx-auto mb-6 text-primary text-6xl font-bold">
+                        01
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">毎日3粒</h3>
+                    <p class="leading-relaxed">1日3粒を目安に、水またはぬるま湯と一緒にお召し上がりください。</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center shadow-xl">
+                    <div class="w-24 h-24 flex items-center justify-center mx-auto mb-6 text-primary text-6xl font-bold">
+                        02
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">食前がおすすめ</h3>
+                    <p class="leading-relaxed">お食事の15分ほど前にお召し上がりいただくと、より効果的です。</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center shadow-xl">
+                    <div class="w-24 h-24 flex items-center justify-center mx-auto mb-6 text-primary text-6xl font-bold">
+                        03
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">継続が力に</h3>
+                    <p class="leading-relaxed">毎日継続していただくことで、理想の自分に近づくことができます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 bg-gray-100 dark:bg-gray-900 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-primary">
+                    SHIFTが選ばれる3つの理由
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400">科学的根拠に基づいたトリプルサポート。</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://source.unsplash.com/300x200/?japanese,woman,fitness,running" alt="燃焼サポート" class="w-full h-40 object-cover rounded-lg mx-auto mb-6 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">1. 燃焼サポート</h3>
+                    <p class="leading-relaxed mb-6">ブラックジンジャー由来成分が、気になる脂肪の燃焼を促進。運動との組み合わせで効率アップ※。</p>
+                    <span class="inline-block bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300 px-4 py-1 rounded-full text-sm font-semibold">効率的なエネルギー消費</span>
+                </div>
+
+                <!-- Feature 2 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://source.unsplash.com/300x200/?japanese,woman,eating,healthy,salad" alt="糖脂ブロック" class="w-full h-40 object-cover rounded-lg mx-auto mb-6 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">2. 糖脂ブロック</h3>
+                    <p class="leading-relaxed mb-6">白インゲン豆エキス等が、食事の糖や脂肪の吸収を抑制。食べる楽しみを我慢しない。</p>
+                    <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 px-4 py-1 rounded-full text-sm font-semibold">食事の罪悪感をカット</span>
+                </div>
+
+                <!-- Feature 3 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://source.unsplash.com/300x200/?japanese,woman,skincare,beauty" alt="美容ケア" class="w-full h-40 object-cover rounded-lg mx-auto mb-6 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">3. 美容ケア</h3>
+                    <p class="leading-relaxed mb-6">コラーゲンやビタミンCを贅沢に配合。ダイエット中の肌トラブルを防ぎ、ハリと潤いを守る。</p>
+                    <span class="inline-block bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-300 px-4 py-1 rounded-full text-sm font-semibold">美しさも同時に育む</span>
+                </div>
+            </div>
+            <p class="text-center text-xs text-gray-500 dark:text-gray-400 mt-8" data-aos="fade-up">※軽度運動時の自社比較試験による。効果には個人差があります。</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white dark:bg-gray-800 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-primary">
+                    喜びの声が続々！
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400">たくさんの方が、理想の自分へシフトしています。</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial Card 1 -->
+                <div data-aos="fade-right" class="bg-gray-50 dark:bg-gray-700 p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://picsum.photos/100/100?random=5" alt="User" class="w-16 h-16 rounded-full mr-4 border-2 border-primary object-cover">
+                        <div>
+                            <h4 class="font-bold text-lg">Mika S.さん (32歳)</h4>
+                            <div class="text-amber-400">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="leading-relaxed">"飲み始めてから、毎朝スッキリ！諦めていたパンツも履けるようになって、自信が持てるようになりました。"</p>
+                </div>
+                <!-- Testimonial Card 2 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-50 dark:bg-gray-700 p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://picsum.photos/100/100?random=6" alt="User" class="w-16 h-16 rounded-full mr-4 border-2 border-primary object-cover">
+                        <div>
+                            <h4 class="font-bold text-lg">Yuki T.さん (28歳)</h4>
+                            <div class="text-amber-400">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="leading-relaxed">"外食が多い私でも、これがあれば安心。食べることを楽しみながら続けられるのが嬉しいです。"</p>
+                </div>
+                <!-- Testimonial Card 3 -->
+                <div data-aos="fade-left" data-aos-delay="200" class="bg-gray-50 dark:bg-gray-700 p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://picsum.photos/100/100?random=7" alt="User" class="w-16 h-16 rounded-full mr-4 border-2 border-primary object-cover">
+                        <div>
+                            <h4 class="font-bold text-lg">Aoi N.さん (41歳)</h4>
+                            <div class="text-amber-400">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="leading-relaxed">"年齢のせいだと諦めていましたが、代謝がサポートされている実感があります。肌の調子も良くなった気がします！"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-20 bg-primary text-white overflow-hidden">
+        <div class="container mx-auto px-6 text-center">
+            <div data-aos="zoom-in-up">
+                <div class="animate-float">
+                    <i class="fas fa-gift text-6xl text-secondary mb-6"></i>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    今こそ、変わる時。
+                </h2>
+            </div>
+            
+            <div data-aos="zoom-in" data-aos-delay="200" class="glass-effect dark:dark-glass-effect rounded-2xl p-8 md:p-12 mb-8 max-w-4xl mx-auto">
+                <p class="text-2xl mb-4 font-semibold">
+                    発売記念キャンペーン
+                </p>
+                <p class="text-5xl md:text-6xl font-pop font-extrabold mb-4">
+                    初回限定 <span class="text-secondary">70% OFF</span>
+                </p>
+                <p class="text-2xl font-bold bg-accent px-6 py-2 rounded-full inline-block mb-4">
+                    《本日23:59まで》
+                </p>
+                <p class="text-lg opacity-90">
+                    迷っている間に、理想のあなたは遠ざかるかも？
+                </p>
+            </div>
+
+            <button data-aos="zoom-in-up" data-aos-delay="400" class="bg-secondary hover:bg-amber-400 text-white font-bold text-xl px-12 py-5 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 animate-pulse-strong">
+                <i class="fas fa-shopping-cart mr-3"></i>
+                お得に始めてみる
+            </button>
+            
+            <p data-aos="fade-up" data-aos-delay="500" class="mt-4 font-semibold">
+                <i class="fas fa-check-circle mr-2"></i>
+                30秒で簡単お申し込み
+            </p>
+
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="600">
+                <div class="glass-effect dark:dark-glass-effect rounded-lg p-4">
+                    <i class="fas fa-shipping-fast text-2xl mb-2"></i>
+                    <p>全国送料無料</p>
+                </div>
+                <div class="glass-effect dark:dark-glass-effect rounded-lg p-4">
+                    <i class="fas fa-undo text-2xl mb-2"></i>
+                    <p>30日間返金保証</p>
+                </div>
+                <div class="glass-effect dark:dark-glass-effect rounded-lg p-4">
+                    <i class="fas fa-headset text-2xl mb-2"></i>
+                    <p>専門サポート付き</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-100 dark:bg-gray-900 overflow-hidden">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-primary">
+                    よくあるご質問
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400">ご購入前に、疑問や不安を解消しましょう。</p>
+            </div>
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div x-data="{ open: false }" class="bg-white dark:bg-gray-800 rounded-lg shadow-md" data-aos="fade-up">
+                    <button @click="open = !open" class="w-full flex justify-between items-center p-6 text-left">
+                        <span class="text-lg font-semibold">いつ飲むのが効果的ですか？</span>
+                        <i class="fas" :class="{ 'fa-chevron-down': !open, 'fa-chevron-up': open }"></i>
+                    </button>
+                    <div x-show="open" x-collapse class="p-6 pt-0 text-gray-600 dark:text-gray-300">
+                        <p>最も効果を実感していただくために、1日の中で一番ボリュームのあるお食事の15分ほど前にお召し上がりいただくことをお勧めしております。</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div x-data="{ open: false }" class="bg-white dark:bg-gray-800 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <button @click="open = !open" class="w-full flex justify-between items-center p-6 text-left">
+                        <span class="text-lg font-semibold">副作用はありますか？</span>
+                        <i class="fas" :class="{ 'fa-chevron-down': !open, 'fa-chevron-up': open }"></i>
+                    </button>
+                    <div x-show="open" x-collapse class="p-6 pt-0 text-gray-600 dark:text-gray-300">
+                        <p>本品は健康食品ですので、医薬品のような副作用はございません。ただし、食物アレルギーのある方や、妊娠・授乳中の方、お薬を服用中の方は、かかりつけの医師にご相談の上、お召し上がりください。</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div x-data="{ open: false }" class="bg-white dark:bg-gray-800 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <button @click="open = !open" class="w-full flex justify-between items-center p-6 text-left">
+                        <span class="text-lg font-semibold">どのくらいで効果が出ますか？</span>
+                        <i class="fas" :class="{ 'fa-chevron-down': !open, 'fa-chevron-up': open }"></i>
+                    </button>
+                    <div x-show="open" x-collapse class="p-6 pt-0 text-gray-600 dark:text-gray-300">
+                        <p>効果を実感されるまでの期間には個人差がございますが、多くのお客様が3ヶ月以上の継続で変化を感じられています。まずは毎日続けていただくことが大切です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 dark:bg-black text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-pop font-bold mb-4 text-primary">SHIFT to IDEAL</h3>
+            <p class="text-gray-400 mb-8">
+                新しい自分と出会う、最高のスタートを。
+            </p>
+            <div class="flex justify-center space-x-6 text-2xl mb-8">
+                <a href="#" class="hover:text-secondary transition-colors"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-secondary transition-colors"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-secondary transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-secondary transition-colors"><i class="fab fa-line"></i></a>
+            </div>
+            <div class="text-sm text-gray-500 border-t border-gray-700 pt-8">
+                <p>&copy; 2024 SHIFT to IDEAL. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // アニメーションの時間を800msに設定
+            once: false, // スクロールするたびにアニメーションを実行
+        });
+
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            html.classList.add('dark');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('darkMode', html.classList.contains('dark'));
+        });
+    </script>
+</body>
+</html>
